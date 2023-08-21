@@ -11,8 +11,13 @@ const equalsButton = document.getElementById('equals');
 const percentageButton = document.getElementById('percentage')
 
 
-upperLabel.style.maxWidth = "400px";
-upperLabel.style.margin = "auto";
+// Créer une balise <style> pour contenir la règle CSS
+const styleElement = document.createElement('style');
+
+// Définir le contenu de la règle CSS
+const cssRule = document.createTextNode('#input[type="text"] { caret-color: transparent; }');
+styleElement.appendChild(cssRule);
+
 
 let operationInput ="";
 let operationState = false;
